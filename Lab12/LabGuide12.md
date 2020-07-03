@@ -1,4 +1,4 @@
-# Introduction to Essbase
+# Lab 12: Introduction to Essbase
 
 ## Introduction
 
