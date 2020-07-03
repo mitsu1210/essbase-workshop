@@ -26,57 +26,57 @@ In this lab we will learn how to Build a Essbase cube sourcing data from Autonom
 
 1. Go to cloud.oracle.com, click on the **Person Icon**
 
-![](./images/image14_1.png "")
+![](./images/image15_1.png "")
 
 2. Then click on **Sign in to Cloud** to sign in with your Oracle Cloud account.
 
-![](./images/image14_2.png "")
+![](./images/image15_2.png "")
 
 3. Enter your **Cloud Account Name** and click **Next**.
 
-![](./images/image14_3.png "")
+![](./images/image15_3.png "")
 
 4. Enter your Oracle Cloud **username** and **password**, and click **Sign In**.
 
-![](./images/image14_4.png "")
+![](./images/image15_4.png "")
 
 ### Step 2: Create an ADW Instance
 
 1. If after logging in, you are taken to the screen below, click on **Infrastructure Dashboard**. If you do not see the screen below when you login, skip this step and move on to the next step below.
 
-![](./images/image14_5.png "")
+![](./images/image15_5.png "")
 
 2. Once you are logged in, you are taken to the OCI Console. Click **Create a data warehouse**.
 
-![](./images/image14_6.png "")
+![](./images/image15_6.png "")
 
 3. This will bring up the Create Autonomous Data Warehouse screen where you will specify the configurations of the instance. Compartments are used to organize resources in the Cloud. Using the drop down, select **EssbaseSalesPlay** from the compartment list.
 
 4. Specify a memorable display name for the instance and database's name, here **EssbaseADW**.
 
-![](./images/image14_7.png "")
+![](./images/image15_7.png "")
 
 5. Then, scroll down and select the CPU core count and Storage (TB) size. Here, we use 1 CPU and 1 TB of storage.
 
-![](./images/image14_8.png "")
+![](./images/image15_8.png "")
 
 6. Uncheck Auto scaling for the purposes of this workshop.
 
 7. Then, specify an ADMIN password for the instance, and a confirmation of it. Make a note of this password.
 
-![](./images/image14_9.png "")
+![](./images/image15_9.png "")
 
 8. For this lab, we will select **License Included** for the license type. If your organization owns Oracle Database licenses already, you may bring those licenses to your cloud service.
 
 9. Make sure everything is filled out correctly, then proceed to click on **Create Autonomous Data Warehouse**.
 
-![](./images/image14_10.png "")
+![](./images/image15_10.png "")
 
 10. Your instance will begin provisioning. Once the state goes from Provisioning to Available, click on your ADW display name to see its details. Note: Here, the name is **EssbaseADW**.
 
 11. You now have created your first Autonomous Data Warehouse instance. Have a look at your instance's details here including its name, database version, CPU count and storage size.
 
-![](./images/image14_11.png "")
+![](./images/image15_11.png "")
 
 ### Step 3: Download the Connection Wallet
 
@@ -84,17 +84,17 @@ As ADW only accepts secure connections to the database, you need to download a w
 
 1. Go back to the Oracle Cloud Console and open the Instances screen. Find your database, click the action menu and select **DB Connection**.
 
-![](./images/image14_13.png "")
+![](./images/image15_13.png "")
 
 2. Under Download a Connection Wallet, click **Download**.
 
-![](./images/image14_14.png "")
+![](./images/image15_14.png "")
 
 3. Specify a password of your choice for the wallet. You will need this password when connecting to the database via SQL Developer later, and is also used as the JKS keystore password for JDBC applications that use JKS for security. Click **Download** to download the wallet file to your client machine. Download the wallet to a location you can easily access, because we will be using it in the next step.
 
 **Note: If you are prevented from downloading your Connection Wallet, it may be due to your browser's pop-blocker. Please disable it or create an exception for Oracle Cloud domains.**
 
-![](./images/image14_15.png "")
+![](./images/image15_15.png "")
 
 ## Part 2 - Uploading data file to ADW 
 
@@ -104,27 +104,27 @@ As ADW only accepts secure connections to the database, you need to download a w
 
 2. In Autonomous Database select Service Console.
 
-![](./images/image14_16.png "")
+![](./images/image15_16.png "")
 
 3. In Development section in Service console.
 
-![](./images/image14_17.png "")
+![](./images/image15_17.png "")
 
 4. Provide ADW instance username and password.
 
-![](./images/image14_18.png "")
+![](./images/image15_18.png "")
 
 5. Import data file ``Sample_Basic_Table.txt`` containing data column to ADW instance.
 
-![](./images/image14_19.png "")
+![](./images/image15_19.png "")
 
 6. Select horizontal ellipsis icon select Data loading -> Upload Data into New table.
 
-![](./images/image14_20.png "")
+![](./images/image15_20.png "")
 
 7. Verify data loaded in to table.
 
-![](./images/image14_21.png "")
+![](./images/image15_21.png "")
 
 ## Part 3 - Create a Connection and Datasource for Oracle Autonomous Data Warehouse
 
@@ -134,7 +134,7 @@ For reference - [Click Here](https://docs.oracle.com/en/cloud/paas/analytics-clo
 
 1. In Essbase UI from home page, click **Sources**.
 
-![](./images/image14_22.png "") 
+![](./images/image15_22.png "") 
 
 2. Click **Create Connection** and select **Oracle Database**.
 
@@ -148,11 +148,11 @@ For reference - [Click Here](https://docs.oracle.com/en/cloud/paas/analytics-clo
 
 7. Click **Test** to validate the connection, and if successful, click Create.
 
- ![](./images/image14_23.png "")
+ ![](./images/image15_23.png "")
 
 8. Verify that the connection was created successfully and appears in the list of connections. Next, you will create a Datasource for the Autonomous Data Warehouse connection.
 
-![](./images/image14_24.png "")
+![](./images/image15_24.png "")
 
 9. Click **Datasources** and click **Create Datasource**. In this step we will create two datasources which are required in next sections.
 
@@ -166,17 +166,17 @@ For reference - [Click Here](https://docs.oracle.com/en/cloud/paas/analytics-clo
 
 ``Select distinct market, statename from SAMPLE_BASIC_TABLE``
 
-![](./images/image14_25.png "")
+![](./images/image15_25.png "")
 
 14. Click **Next**. If the SQL statement was correct to query an Autonomous Data Warehouse area, you should see the queried columns populated.
  
-![](./images/image14_26.png "")
+![](./images/image15_26.png "")
 
 15. Leave parameters section as-is and click **Next**.
 
 16. Review the preview panel. You should see the results of the SQL query fetching columns of data from Autonomous Data Warehouse.
 
-![](./images/image14_27.png "") 
+![](./images/image15_27.png "") 
 
 17. If the preview looks correct, click **Create** to finish creating the Datasource.
 
@@ -186,11 +186,11 @@ For reference - [Click Here](https://docs.oracle.com/en/cloud/paas/analytics-clo
 
 ``Select Product, Scenario, Statename, months, Sales from SAMPLE_BASIC_TABLE``
 
-![](./images/image14_28.png "")
+![](./images/image15_28.png "")
 
 20. Preview tab for ADW_Dataload datasource should look similar to mentioned below.
 
-![](./images/image14_29.png "")
+![](./images/image15_29.png "")
 
 ## Part 4 - Build Dimensions Using SQL Datasource with ADW
 
@@ -226,17 +226,17 @@ For reference - [Click Here](https://docs.oracle.com/en/cloud/paas/analytics-clo
 
 16. Click the Generation Name field and type REGION.The Market dimension is generation 1, and you added a child named Region.
  
- ![](./images/image14_30.png "")
+ ![](./images/image15_30.png "")
 
 17. Click Create > Regular to create a second dimension build rule field.
  
-![](./images/image14_31.png "")
+![](./images/image15_31.png "")
 
 18. Name the field STATE and associate it with dimension Market, at generation 3.
  
-![](./images/image14_32.png "")
+![](./images/image15_32.png "")
 
-![](./images/image14_33.png "")
+![](./images/image15_33.png "")
 
 19. Click the Source button to begin associating a data source with the dimension build rules.
 
@@ -244,7 +244,7 @@ For reference - [Click Here](https://docs.oracle.com/en/cloud/paas/analytics-clo
 
 21. Back in the Edit Source dialog for your dimension build rule, in the SQL/Datasource Properties group select Datasource radio button. Select Datasource as ADW_Datasource from dropdown.
  
-![](./images/image14_34.png "")
+![](./images/image15_34.png "")
 
 22. Click OK,, then Verify, Save and Close. to save and close the ``MarketSQLDimbuild`` rule.
 
@@ -260,7 +260,7 @@ For reference - [Click Here](https://docs.oracle.com/en/cloud/paas/analytics-clo
 
 28. Select Datasource as the load type.
  
- ![](./images/image14_35.png "")
+ ![](./images/image15_35.png "")
  
 29. From the Restructure Options drop-down list, select Preserve All Data.
 
@@ -282,7 +282,7 @@ After building the dimensions, you will clear data from the cube, and then load 
 
 4. Notice that data was cleared. For example:
  
- ![](./images/image14_36.png "")
+ ![](./images/image15_36.png "")
 
 Keep the worksheet open. Next, you will create load rules that use SQL to repopulate the Sales data from the table.
 
@@ -306,7 +306,7 @@ Keep the worksheet open. Next, you will create load rules that use SQL to repopu
 
 13. In Essbase, in the **New Rule** browser tab for your ``SalesSQLDataload`` rule, select Sales from the Select drop-down box.
 
- ![](./images/image14_37.png "")
+ ![](./images/image15_37.png "")
 
 14. Click **Create > Regular** to continue adding fields ,you will notice build rule has automatically picked fields from datasource.
 
@@ -318,13 +318,13 @@ Keep the worksheet open. Next, you will create load rules that use SQL to repopu
 
 **Your load rule fields should now be arranged like this:**
 	 
-![](./images/image14_38.png "")
+![](./images/image15_38.png "")
 
 18. Click the **Source** button to begin associating a data source with the load rules.
 
 19. In the **General** tab, leave fields empty. Navigate to SQL/Datasource Properties section and select Datasource radio button.
 
-![](./images/image14_39.png "") 
+![](./images/image15_39.png "") 
 
 20. Verify, save, and close the SalesSQLDataload rule.
 
@@ -340,7 +340,7 @@ Keep the worksheet open. Next, you will create load rules that use SQL to repopu
 
 25. Select **Datasource** as the load type.
  
- ![](./images/image14_40.png "")
+ ![](./images/image15_40.png "")
  
 26. Click OK to begin the job.
 
@@ -348,4 +348,4 @@ The data load begins. Click the Refresh symbol to watch the status, and when it 
 
 27. Go back to the worksheet in Smart View, and refresh it to verify that the data was loaded from the table.
  
-![](./images/image14_41.png "")
+![](./images/image15_41.png "")
