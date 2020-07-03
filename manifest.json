@@ -1,0 +1,34 @@
+{
+    "tutorials": [
+        {
+            "title": "Lab 12: Introduction to Essbase",
+            "publisheddate": "04/13/2020",
+            "filename": "./Lab12/LabGuide12.md"
+        },
+        {
+            "title": "Lab 13: Essbase on OCI",
+            "publisheddate": "04/13/2020",
+            "filename": "./Lab13/LabGuide13.md"
+        },
+        {
+            "title": "Lab 14: Essbase and ADW",
+            "publisheddate": "04/13/2020",
+            "filename": "./Lab14/LabGuide14.md"
+        },
+        {
+            "title": "Lab 15: Essbase Feature Functionalities",
+            "publisheddate": "04/13/2020",
+            "filename": "./Lab15/LabGuide15.md"
+        },
+        {
+            "title": "Lab 16: User and Scenario Management",
+            "publisheddate": "04/13/2020",
+            "filename": "./Lab16/LabGuide16.md"
+        },
+        {
+            "title": "Lab 17: Data Visualization Analysis",
+            "publisheddate": "04/13/2020",
+            "filename": "./Lab17/LabGuide17.md"
+        }
+     ]
+}
