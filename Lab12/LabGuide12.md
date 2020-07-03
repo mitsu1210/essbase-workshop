@@ -119,4 +119,4 @@ With the above stated benefits, it’s certainly worthwhile to understand the ni
 
 * Soon after requesting your trial you will receive an activation email. Once that email is received and you have logged in to your environment you can begind the lab.
 
-Access the essbase labs using our web-friendly interface [here](https://bangaloresolutionshub.github.io/essbase) 
+Access the essbase labs using our web-friendly interface [here](https://bangaloresolutionshub.github.io/essbase-workshop) 
