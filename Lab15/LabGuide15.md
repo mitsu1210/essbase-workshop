@@ -24,7 +24,7 @@ In this lab we will learn how to Build a Essbase cube sourcing data from Autonom
 
 ### Step 1: Sign in to Oracle Cloud
 
-1. Go to cloud.oracle.com, click on the **Person Icon**
+1. Go to (cloud.oracle.com)[cloud.oracle.com], click on the **Person Icon**
 
 ![](./images/image15_1.png "")
 
